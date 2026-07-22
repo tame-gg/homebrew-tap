@@ -4,10 +4,10 @@ cask "powerflow" do
 
   url "https://github.com/tame-gg/powerflow/releases/download/v#{version}/Powerflow-macos27-aarch64.zip"
   name "Powerflow"
-  desc "Menu bar Mac power usage and charging monitor"
+  desc "Menu bar power usage and charging monitor"
   homepage "https://github.com/tame-gg/powerflow"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
   depends_on arch: :arm64
 
   app "Powerflow.app"
