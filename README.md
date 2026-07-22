@@ -10,16 +10,23 @@ brew tap tame-gg/tap
 
 Homebrew maps the GitHub repo [`tame-gg/homebrew-tap`](https://github.com/tame-gg/homebrew-tap) to the tap name **`tame-gg/tap`**.
 
+On Homebrew 6+, third-party taps must be trusted before casks will load:
+
+```bash
+brew trust tame-gg/tap
+```
+
 ## Install Powerflow
 
 [Powerflow](https://github.com/tame-gg/powerflow) is a menu-bar Mac power / charging monitor (fork with macOS 27 fixes).
 
 ```bash
 brew tap tame-gg/tap
+brew trust tame-gg/tap   # Homebrew 6+
 brew install --cask powerflow
 ```
 
-Or in one shot after tapping:
+Or in one shot after tapping and trusting:
 
 ```bash
 brew install --cask tame-gg/tap/powerflow
