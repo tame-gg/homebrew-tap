@@ -26,6 +26,7 @@ cask "powerflow" do
   zap trash: [
     "~/Library/Application Support/Powerflow",
     "~/Library/Caches/Powerflow",
+    "~/Library/Logs/Powerflow",
     "~/Library/Preferences/Powerflow.plist",
     "~/Library/WebKit/Powerflow",
   ]
