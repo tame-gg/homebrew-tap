@@ -7,7 +7,7 @@ cask "freshlock" do
   desc "Protect any macOS app with Touch ID, Apple Watch, or your Mac password"
   homepage "https://github.com/tame-gg/freshlock"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "FreshLock.app"
 
