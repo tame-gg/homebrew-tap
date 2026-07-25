@@ -16,6 +16,51 @@ On Homebrew 6+, third-party taps must be trusted before casks will load:
 brew trust tame-gg/tap
 ```
 
+
+## Install FreshLock
+
+[FreshLock](https://github.com/tame-gg/freshlock) protects any macOS app with Touch ID, Apple Watch, or your Mac password.
+
+```bash
+brew tap tame-gg/tap
+brew trust tame-gg/tap   # Homebrew 6+
+brew install --cask freshlock
+```
+
+Or:
+
+```bash
+brew install --cask tame-gg/tap/freshlock
+```
+
+### Accessibility
+
+FreshLock needs Accessibility permission for its lock overlay. Grant it in
+**System Settings → Privacy & Security → Accessibility**.
+
+### Gatekeeper / “damaged” app
+
+Release builds may be **unsigned** (no Apple Developer ID / notarization). The
+cask’s `postflight` clears quarantine with `xattr -cr` and applies an ad-hoc
+`codesign`. If macOS still says the app is damaged:
+
+```bash
+xattr -cr /Applications/FreshLock.app
+open /Applications/FreshLock.app
+```
+
+### Upgrade / uninstall
+
+```bash
+brew upgrade --cask freshlock
+brew uninstall --cask freshlock
+```
+
+### Links
+
+- App repo: https://github.com/tame-gg/freshlock
+- Releases: https://github.com/tame-gg/freshlock/releases
+
 ## Install Powerflow
 
 [Powerflow](https://github.com/tame-gg/powerflow) is a menu-bar Mac power / charging monitor (fork with macOS 27 fixes).
@@ -64,4 +109,4 @@ brew uninstall --cask powerflow
 
 ## License
 
-Cask definitions in this tap are provided for convenience. Application licenses remain with their respective projects (Powerflow is MIT).
+Cask definitions in this tap are provided for convenience. Application licenses remain with their respective projects.
