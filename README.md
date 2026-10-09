@@ -107,6 +107,44 @@ brew uninstall --cask powerflow
 - Releases: https://github.com/tame-gg/powerflow/releases
 - Latest cask target: [v0.2.3-macos27](https://github.com/tame-gg/powerflow/releases/tag/v0.2.3-macos27)
 
+## Install Flavor
+
+[Flavor](https://github.com/tame-gg/Flavor) runs several Tailscale and Headscale networks side by side. The formula installs the daemon (`flavord`) and CLI (`flavorctl`); the cask installs the desktop app.
+
+```bash
+brew tap tame-gg/tap
+brew trust tame-gg/tap   # Homebrew 6+
+brew install flavor
+brew services start flavor
+brew install --cask flavor-desktop
+```
+
+Intel and Apple Silicon. System-wide names are Linux-only; see the [macOS guide](https://github.com/tame-gg/Flavor/wiki/macOS).
+
+### Gatekeeper
+
+Flavor.app is ad-hoc signed, not notarized, so macOS blocks the first launch. Open it once, then click **Open Anyway** in **System Settings → Privacy & Security**. Or:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/Flavor.app
+```
+
+### Upgrade / uninstall
+
+```bash
+brew upgrade flavor flavor-desktop
+brew services stop flavor
+brew uninstall --cask flavor-desktop
+brew uninstall flavor
+```
+
+Uninstalling keeps your networks in `~/Library/Application Support/flavor`.
+
+### Links
+
+- App repo: https://github.com/tame-gg/Flavor
+- Releases: https://github.com/tame-gg/Flavor/releases
+
 ## License
 
 Cask definitions in this tap are provided for convenience. Application licenses remain with their respective projects.
