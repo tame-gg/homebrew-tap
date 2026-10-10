@@ -1,9 +1,9 @@
 cask "flavor-desktop" do
   arch arm: "arm64", intel: "amd64"
 
-  version "0.1.0-beta.5"
-  sha256 arm:   "cfc79effd1c15dc76f5ca6bd18cc5bf83fe529cc8c4380dda22674841bbeac2d",
-         intel: "b4d5f9ff8273aa4a749ff5471504c8c90900ed6f318589ab56a09c29dbc0c7f7"
+  version "0.1.0-beta.6"
+  sha256 arm:   "ffb3868924f46252ba3654c777bb61dfd9e21cd671441e401894a0dff0876421",
+         intel: "8daee98efdf672e32c1a3b89036c1bc55dfc0d6a626d62a4d75aa90aa956ea80"
 
   url "https://github.com/tame-gg/Flavor/releases/download/v#{version}/flavor-#{version}-darwin-#{arch}.tar.gz"
   name "Flavor"

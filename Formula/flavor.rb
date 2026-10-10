@@ -4,11 +4,11 @@ class Flavor < Formula
   license "MIT"
 
   if Hardware::CPU.arm?
-    url "https://github.com/tame-gg/Flavor/releases/download/v0.1.0-beta.5/flavor-0.1.0-beta.5-darwin-arm64.tar.gz"
-    sha256 "cfc79effd1c15dc76f5ca6bd18cc5bf83fe529cc8c4380dda22674841bbeac2d"
+    url "https://github.com/tame-gg/Flavor/releases/download/v0.1.0-beta.6/flavor-0.1.0-beta.6-darwin-arm64.tar.gz"
+    sha256 "ffb3868924f46252ba3654c777bb61dfd9e21cd671441e401894a0dff0876421"
   else
-    url "https://github.com/tame-gg/Flavor/releases/download/v0.1.0-beta.5/flavor-0.1.0-beta.5-darwin-amd64.tar.gz"
-    sha256 "b4d5f9ff8273aa4a749ff5471504c8c90900ed6f318589ab56a09c29dbc0c7f7"
+    url "https://github.com/tame-gg/Flavor/releases/download/v0.1.0-beta.6/flavor-0.1.0-beta.6-darwin-amd64.tar.gz"
+    sha256 "8daee98efdf672e32c1a3b89036c1bc55dfc0d6a626d62a4d75aa90aa956ea80"
   end
 
   depends_on :macos
