@@ -1,6 +1,6 @@
 cask "powerflow" do
-  version "0.2.4-macos27"
-  sha256 "36d623cfc0afcd7f2f3d2dd8116bbb4a2eb4035d1f597b0b4d74f8b1455e3af9"
+  version "0.2.5-macos27"
+  sha256 "8fa0aa08649e371e3f3a3a840b9575bc94d0d1a44373e84da815fd674c7c54ba"
 
   url "https://github.com/tame-gg/powerflow/releases/download/v#{version}/Powerflow-macos27-aarch64.zip"
   name "Powerflow"
